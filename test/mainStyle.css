@@ -1,0 +1,85 @@
+body{
+  min-width: 320px;
+
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+  color: #626262;
+}
+
+img{
+  max-width: 100%;
+  height: auto;  
+}
+
+p{
+  line-height: 1.5rem;
+}
+
+h3,h4{
+  margin-bottom: 2rem;  
+}
+
+a{
+  color:#b4ad9e;  
+}
+a:hover{
+  color: #988377;
+}
+
+.header .navbar-light{
+  background-color: #fff;
+}
+.header .navbar-brand{
+  font-family: 'Incosolata',monospace;
+  font-size: 30px;
+  color:000;  
+}
+.navbar{
+  text-transform: uppercase;
+}
+.header .nav-item{
+  margin-left:50px;
+}
+.header .nav-link::after{
+  content:'';
+  display: block;
+  width: 100%;
+  background-color: #ccc;
+  height:1px;
+  transform: scale(0);
+  transition: all .3s;
+}
+.header .nav-link:hover::after{
+  transform: scale(1);
+}
+
+.slider{
+  margin-bottom: 50px;
+}
+
+.single-post__title, .single-post__link-more{
+  font-family: 'Ubuntu',sans-serif;
+  font-size: 14px;
+  color: #b4ade9;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.single-post__category a{
+  color: #626262;
+}
+
+.grid-post {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+}
+.grid-post .card{
+  border: 0;
+  margin-bottom: 100px;
+}
+.grid-post .card-body{
+  padding-left: 0;
+}
+.grid-post .card-img-top{
+  max-height: 350px;
+}
