@@ -241,7 +241,7 @@
  // getting data from the server
  function getData() {
    const goodsWraper = document.querySelector('.goods');
-   return fetch('../db/db.json').then((Response) => {
+   return fetch('https://tsed-alex.github.io/workShop/db/db.json').then((Response) => {
        if (Response.ok) {
          return Response.json();
        } else {
