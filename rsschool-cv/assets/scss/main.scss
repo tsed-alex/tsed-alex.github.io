@@ -1,0 +1,287 @@
+@import "./normalize.css";
+@import "../font-awesome-4.7.0/scss/font-awesome.scss";
+
+/*
+    Media style for adaptive
+*/
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 570px;
+
+// Small tablets (portrait view)
+$screen-md-min: 740px;
+
+// Medium devices
+@mixin md {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+
+ // Small devices
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+
+$padtopsection:25px;
+$botborder:#b4b4b4;
+body{
+    background-image: url('../assets/img/paper-753508_1920.jpg');   
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    color: rgb(74, 73, 76);
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    .container {
+        display: flex;
+        @include sm{
+            display: block;
+        }
+
+        &__left {
+            background: rgb(61, 60, 65);
+            position: relative;
+            flex-basis: 350px;
+            flex-shrink: 1;
+
+            padding-top: $padtopsection;
+            padding-left: 25px;
+            padding-right: 25px;
+
+            color: white;
+            @include sm{
+                padding-bottom: 20px;
+            }
+
+            &:after {
+                content: '';
+                width: 85%;
+                height: 0;
+                position: absolute;
+                border: 1px solid $botborder;
+                bottom: 0;
+                
+                @include sm{
+                    border: none;
+                }
+            }
+
+            .fa {
+                font-size: 1.2em;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                display: inline-block;
+                width: 80%;
+                padding: 10px;
+                font-size: 18px;
+            }
+        }
+
+        &__right {
+            position: relative;
+            background: rgb(235, 235, 235);
+            flex-shrink: 2;
+            flex-basis: 700px;
+
+            padding-top: $padtopsection;
+
+            padding-right: 25px;
+
+            h2 {
+                display: inline-block;
+                padding: 5px 10px 5px 25px;
+                background: #3d3c41;
+                color: white;
+            }
+
+            .tab-col {
+                &:last-child {
+                    padding-bottom: 25px;
+                }
+            }
+
+            .tab-col {
+                display: flex;
+                padding-left: 25px;
+
+                &__left {
+                    margin-right: auto;
+                    flex-basis: 40%;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        width: 0;
+                        height: 100%;
+                        position: absolute;
+                        border: 1px solid $botborder;
+                        top: 0;
+                        right: -19px;
+                    }
+
+                    &:before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        border: 6px solid $botborder;
+                        border-radius: 50%;
+                        top: 0;
+                        right: -24px;
+                    }
+                }
+
+                &__right {
+                    flex-basis: 50%;
+                    margin-left: auto;
+
+                    p {
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+
+            &:after {
+                content: '';
+                width: 90%;
+                height: 0;
+                position: absolute;
+                border: 1px solid $botborder;
+                left: 20px;
+                bottom: 0;
+
+                @include sm{
+                    border: none;
+                }
+            }
+
+            .qualiti-list {
+                &__item {
+                    display: inline-block;
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-right: 55px;
+                    margin-bottom: 25px;
+                    position: relative;
+
+                    &:before {
+                        content: '*';
+                        width: 0;
+                        height: 0;
+                        /* border: 4px solid black; */
+                        //border-radius: 50%;
+                        position: absolute;
+                        left: -15px;
+                        top: 2px;
+                    }
+                }
+            }
+
+            .hobbi-list {
+                &__item {
+                    display: inline-block;
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-right: 55px;
+                    margin-bottom: 25px;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border: 4px solid rgb(74,73,76);
+                        border-radius: 50%;
+                        position: absolute;
+                        left: -15px;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+
+        .skills-list {
+            font-size: 16px;
+
+            &__item {
+                padding-bottom: 5px;
+            }
+        }
+    }
+
+    .container:last-of-type .container__left:after,
+    .container:last-of-type .container__right:after {
+        border: none;
+    }
+
+    .container:last-of-type .container__left,
+    .container:last-of-type .container__right {
+        padding-bottom: 35px;
+    }
+
+    .logo-face {
+        padding-bottom: 20px;
+        margin: 0 auto;
+        display: block;
+        //@extendborder-bottom: 1px solid #b4b4b4;
+        text-align: center;
+
+        img{
+            width: 125px;
+        }
+    }
+
+    /* 
+    second part page content
+*/
+    .charter {
+        display: flex;
+        margin-left: 15px;
+        margin-right: 15px;
+        justify-content: space-between;
+        min-height: 100%;
+        box-sizing: border-box;
+
+        .contact-info {
+            text-align: end;
+            list-style: none;
+            line-height: 1.2
+        }
+
+        &__left-content {}
+
+        &__right-content {
+            margin-right: 5px;
+        }
+
+        padding-bottom: 30px;
+       @include md{
+        display: block;
+       }
+    }
+
+    .first-name {
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+
+    .last-name {
+        font-size: 35px;
+    }
+
+    .job {
+        font-size: 18px;
+    }
+}
+
