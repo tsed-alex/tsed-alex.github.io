@@ -1,0 +1,5 @@
+.idea/
+theyalow-test/node_modules/
+theyalow-test/public/*.css
+theyalow-test/public/*.js
+theyalow-test/public/
