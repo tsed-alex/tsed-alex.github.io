@@ -1,10 +1,146 @@
-$color: teal;
+@import 'reset.css';
 
-h1 {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-  background-color: $color;
-  color: white;
-  text-align: center;
+$color: teal;
+*{
+    box-sizing: content-box ;
+}
+
+.wrapper-header{
+  .main-header{
+    display: flex;
+    max-height: 62px;
+
+    text-transform: uppercase;
+
+    &__left-col{
+        display: flex;
+        align-items: center;
+
+        /*padding-left: 2.008%;
+        padding-top: 1.84%;
+        padding-bottom: 2.18%;
+        padding-right: 3.02%;*/
+
+        background: #4c4c4c linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
+    }
+
+    &__logo{
+        width: 39px;
+        height: 38px;
+        margin-top:11px;
+        margin-left: 12px;
+        margin-bottom: 13px;
+        //margin-left: 0.088%;
+
+        background: url('../images/sm-logo.svg');
+    }
+    &__heading{
+        margin-top: 26px;
+        margin-left: 9px;
+        margin-bottom: 22px;
+        margin-right: 18px;
+
+        /*margin-top: 13px;
+        margin-left: 9px;
+        margin-bottom: 4%;*/
+
+        font-size: 19px;
+        letter-spacing: 0px;
+        color: #ffffff;
+        font-family: "Lucida Sans";
+        font-style: italic;
+        text-align: center;
+
+        text-shadow: 1px 1.732px 0px rgba(0,0,0,0.42);
+    }
+
+    &__nav{
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__right-col{
+        display: flex;
+        flex-grow: 1;
+
+        .menu{
+            display: flex;
+            flex-grow: 1;
+
+            &__item{
+                background-image: linear-gradient(0deg, #e9bb04 0%, #f5c710 100%);
+
+                flex-grow: 1;
+                display: flex;
+
+                font-size: 19px;
+                letter-spacing: 0px;
+                color: #9b7d08;
+                font-family: "Segoe WP";
+                text-align: center;
+
+                .item-link-1{
+                    position: relative;
+                    flex-grow: 1;
+                    padding-top: 25px;
+                    padding-bottom: 23px;
+                    margin-left: 42px;
+
+                    border-right: 1px solid #d9af05;
+
+                    &:before{
+                        position: absolute;
+                        left:-23px;
+                        top:19px;
+                        content: '';
+                        width: 25px;
+                        height: 23px;
+                        background: url('../images/link-1.svg');
+                    }
+                }
+                .item-link-2{
+                    position: relative;
+                    flex-grow: 1;
+                    padding-top: 25px;
+                    padding-bottom: 23px;
+                    margin-left: 42px;
+
+                    border-right: 1px solid #d9af05;
+
+                    &:before{
+                        position: absolute;
+                        left:-21px;
+                        top:19px;
+                        content: '';
+                        width: 23px;
+                        height: 23px;
+                        background: url('../images/link-2.svg');
+                    }
+                }
+                .item-link-3{
+                    position: relative;
+                    flex-grow: 1;
+                    padding-top: 25px;
+                    padding-bottom: 23px;
+                    margin-left: 42px;
+
+                    border-right: 1px solid #d9af05;
+
+                    &:before{
+                        position: absolute;
+                        left:-26px;
+                        top:19px;
+                        content: '';
+                        width: 29px;
+                        height: 22px;
+                        background: url('../images/link-3.svg');
+                    }
+                }
+                &:last-child{
+                    border:none;
+                }
+            }
+        }
+    }
+  }
 }
